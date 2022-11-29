@@ -1,0 +1,31 @@
+﻿body {
+}
+
+.autoMargin {
+    margin: auto;
+}
+
+#imageCarousel {
+    width: 100%;
+    margin: auto;
+}
+
+.myImg {
+    width: 100%;
+    margin: auto;
+}
+
+#container {
+    border: 1px solid white;
+    background: #000;
+    width: 80%;
+    height: 80%;
+    padding: 0 0 5px 0;
+    overflow-y: scroll
+}
+
+#container img {
+    border: 1px solid red;
+    float: left;
+    margin: 5px 0 0 5px
+}
