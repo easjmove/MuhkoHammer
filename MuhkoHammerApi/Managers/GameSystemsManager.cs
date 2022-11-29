@@ -13,12 +13,12 @@ namespace MuhkoHammerApi.Managers
 
         public GameSystemsManager()
         {
-            myDB = new DBReader(new SqlConnection("Data source=mssql8.unoeuro.com;Initial Catalog=muhkohammer_dk_db_muhkohammer;User ID=muhkohammer_dk;Password=d6xHfa9mF2GE"));
+            myDB = new DBReader(new SqlConnection(Secrets.ConnString));
         }
 
         private static List<GameSystem> ReadGameSystems(bool includeAll)
         {
-            DBReader myDB = new DBReader(new SqlConnection("Data source=mssql8.unoeuro.com;Initial Catalog=muhkohammer_dk_db_muhkohammer;User ID=muhkohammer_dk;Password=d6xHfa9mF2GE"));
+            DBReader myDB = new DBReader(new SqlConnection(Secrets.ConnString));
             List<GameSystem> gameSystems = myDB.ReadOrgData(includeAll);
             return gameSystems;
         }
